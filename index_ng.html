@@ -1,10 +1,8 @@
-<?php
-  require("./core.php");
-?>
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <script src="./core.js" charset="utf-8"></script>
     <link rel="apple-touch-icon" sizes="57x57" href="/static/img/favicon/donote/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/static/img/favicon/donote/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/static/img/favicon/donote/apple-icon-72x72.png">
@@ -23,7 +21,7 @@
     <meta name="msapplication-TileImage" content="/static/img/favicon/donote/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
-    <title>Support Pin Generater Next Generation</title>
+    <title>Support Pin Generater JavaScript</title>
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   	<link rel="stylesheet" type="text/css" href="./style.css?ver=4">
   </head>
@@ -32,49 +30,49 @@
       <header class="jumbotron text-center">
         <h2><strong>Do</strong>Products™</h2>
         <h3>Your Support Code</h3>
-        <?php
-          echo "<h1>";
-          echo $mo;
-          echo $brow;
-          echo $oper;
-          echo $bit;
-          echo "</h1>";
-        ?>
+        <script type="text/javascript">
+          document.write("<h1>");
+          document.write(mo);
+          document.write(brow);
+          document.write(oper);
+          document.write(bit);
+          document.write("</h1>");
+        </script>
       </header>
     </div>
     <div class="container">
   	  <header class="jumbotron text-left margin-erase">
-        <?php
-          if ($brow == '0') {
-            echo "Web Browser | No Support";
+        <script type="text/javascript">
+          if (brow == '0') {
+            document.write("Web Browser | No Support");
           } else {
-            if ($brow == '6') {
-              echo "Web Browser | Unknown";
+            if (brow == '6') {
+              document.write("Web Browser | Unknown");
             } else {
-              echo "Web Browser | Support";
+              document.write("Web Browser | Support");
             }
           }
-          echo '<br />';
-          if ($operabil == '0') {
-            echo "Operation System | No Support";
+          document.write('<br />');
+          if (operabil == '0') {
+            document.write("Operation System | No Support");
           } else {
-            if ($operabil == '2') {
-              echo "Operation System | Unknown";
+            if (operabil == '2') {
+              document.write("Operation System | Unknown");
             } else {
-              echo "Operation System | Support";
+              document.write("Operation System | Support");
             }
           }
-          echo '<br />';
-          echo "Kind of Client Device | ".$devn;
-          echo '<br />';
-          echo "Client Web Browser | ".$brown;
-          echo '<br />';
-          echo "Client Operation System | ".$opern;
-          echo '<br />';
-          echo "Client Bit | ".$bitn;
-          echo '<br />';
-          echo $_SERVER['HTTP_USER_AGENT'];
-        ?>
+          document.write('<br />');
+          document.write("Kind of Client Device | " + devn);
+          document.write('<br />');
+          document.write("Client Web Browser | " + brown);
+          document.write('<br />');
+          document.write("Client Operation System | " + opern);
+          document.write('<br />');
+          document.write("Client Bit | " + bitn);
+          document.write('<br />');
+          document.write(info);
+        </script>
       </header>
     </div>
     <div class="container">
