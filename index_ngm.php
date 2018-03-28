@@ -1,8 +1,10 @@
+<?php
+  require("./core.php");
+?>
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <script src="./core.js" charset="utf-8"></script>
     <link rel="apple-touch-icon" sizes="57x57" href="/static/img/favicon/donote/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/static/img/favicon/donote/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/static/img/favicon/donote/apple-icon-72x72.png">
@@ -30,45 +32,49 @@
         <header class="jumbotron text-center">
           <h1><strong>Do</strong>™</h1>
           <h4>Your Support Code</h4>
-          <script type="text/javascript">
-            document.write("<h1>");
-            document.write(mo);
-            document.write(brow);
-            document.write(oper);
-            document.write(bit);
-            document.write("</h1>");
-          </script>
+          <?php
+            echo "<h1>";
+            echo $mo;
+            echo $brow;
+            echo $oper;
+            echo $bit;
+            echo "</h1>";
+          ?>
         </header>
       </div>
       <div class="container">
   			<header class="jumbotron text-left margin-erase">
-          <script type="text/javascript">
-            if (brow == '0') {
-              document.write("<h5>Web Browser | No Support</h5>");
-            } else if (brow == '6') {
-                document.write("<h5>Web Browser | Unknown</h5>");
-              } else {
-                document.write("<h5>Web Browser | Support</h5>");
-              }
-            document.write('<br />');
-            if (operabil == '0') {
-              document.write("<h5>Operation System | No Support</h5>");
-            } else if (operabil == '2') {
-              document.write("<h5>Operation System | Unknown</h5>");
+          <?php
+          if ($brow == '0') {
+            echo "<h5>Web Browser | No Support</h5>";
+          } else {
+            if ($brow == '6') {
+              echo "<h5>Web Browser | Unknown</h5>";
             } else {
-              document.write("<h5>Operation System | Support</h5>");
+              echo "<h5>Web Browser | Support</h5>";
             }
-            document.write('<br />');
-            document.write("<h5>Kind of Client Device | " + devn + "</h5>");
-            document.write('<br />');
-            document.write("<h5>Client Web Browser | " + brown + "</h5>");
-            document.write('<br />');
-            document.write("<h5>Client Operation System | " + opern) + "</h5>";
-            document.write('<br />');
-            document.write("<h5>Client Bit | " + bitn + "</h5>");
-            document.write('<br />');
-            document.write(info);
-        </script>
+          }
+          echo '<br />';
+          if ($operabil == '0') {
+            echo "<h5>Operation System | No Support</h5>";
+          } else {
+            if ($operabil == '2') {
+              echo "<h5>Operation System | Unknown</h5>";
+            } else {
+              echo "<h5>Operation System | Support</h5>";
+            }
+          }
+          echo '<br />';
+          echo "<h5>Kind of Client Device | ".$devn.'</h5>';
+          echo '<br />';
+          echo "<h5>Client Web Browser | ".$brown.'</h5>';
+          echo '<br />';
+          echo "<h5>Client Operation System | ".$opern.'</h5>';
+          echo '<br />';
+          echo "<h5>Client Bit | ".$bitn.'<h5>';
+          echo '<br />';
+          echo $_SERVER['HTTP_USER_AGENT'];
+        ?>
       </header>
     </div>
     <div class="container">
