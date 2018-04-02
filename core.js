@@ -40,13 +40,13 @@ if (info.indexOf('MSIE') !== -1) {  //Client Browser Detection
             brow = '4';
             brown = 'NAVER Whale';
           } else if (info.indexOf('Chrome') !== -1) {
-              brow = '4';
+              brow = '5';
               brown = 'Google Chrome';
             } else if (info.indexOf('Safari') !== -1) {
-                brow = '5';
+                brow = '6';
                 brown = 'Apple Safari';
               } else {
-                brow = '6';
+                brow = '7';
                 brown = 'Unknown Web Browser';
               }
 if (info.indexOf('Windows NT 6.1') !== -1) {  //Client Operation System Detection
