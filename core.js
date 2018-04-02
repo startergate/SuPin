@@ -1,6 +1,13 @@
 const info = navigator.userAgent;
 var mo;
 var devn;
+var brow;
+var brown;
+var oper;
+var operabil;
+var opern;
+var bit;
+var bitn;
 if (info.indexOf('Mobile') !== -1) {  //Client Device Detection
   mo = '1';
   devn = 'Mobile';
@@ -14,8 +21,6 @@ if (info.indexOf('Mobile') !== -1) {  //Client Device Detection
       mo = '0';
       devn = 'Computer';
     }
-var brow;
-var brown;
 if (info.indexOf('MSIE') !== -1) {  //Client Browser Detection
   brow = '0';
   brown = 'Microsoft Internet Explorer';
@@ -31,19 +36,19 @@ if (info.indexOf('MSIE') !== -1) {  //Client Browser Detection
       } else if (info.indexOf('Firefox') !== -1) {
           brow = '3';
           brown = 'Mozila Firefox';
-        } else if (info.indexOf('Chrome') !== -1) {
+        } else if (info.indexOf('Whale') !== -1) {
             brow = '4';
-            brown = 'Google Chrome';
-          } else if (info.indexOf('Safari') !== -1) {
-              brow = '5';
-              brown = 'Apple Safari';
-            } else {
-              brow = '6';
-              brown = 'Unknown Web Browser';
-            }
-var oper;
-var operabil;
-var opern;
+            brown = 'NAVER Whale';
+          } else if (info.indexOf('Chrome') !== -1) {
+              brow = '4';
+              brown = 'Google Chrome';
+            } else if (info.indexOf('Safari') !== -1) {
+                brow = '5';
+                brown = 'Apple Safari';
+              } else {
+                brow = '6';
+                brown = 'Unknown Web Browser';
+              }
 if (info.indexOf('Windows NT 6.1') !== -1) {  //Client Operation System Detection
   oper = '1';
   operabil = '1';
@@ -109,15 +114,16 @@ if (info.indexOf('Windows NT 6.1') !== -1) {  //Client Operation System Detectio
                               operabil = '2';
                               opern = 'Unknown Operation System';
                             }
-var bit;
-var bitn;
 if (info.indexOf('x64') !== -1) { //Client Operation System Bit Detection
   bit = '1';
   bitn = '64bit';
 } else if (info.indexOf('WOW64') !== -1) {
     bit = '1';
     bitn = '64bit';
-  } else {
-    bit = '0';
-    bitn = '32bit';
-  }
+  } else if (info.indexOf('Win64') !== -1) {
+      bit = '1';
+      bitn = '64bit';
+    } else {
+      bit = '0';
+      bitn = '32bit';
+    }
