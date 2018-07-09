@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <script src="./core.js" charset="utf-8"></script>
+    <script src="./function_code.js" charset="utf-8"></script>
+    <script src="./function_text.js" charset="utf-8"></script>
     <link rel="apple-touch-icon" sizes="57x57" href="/static/img/favicon/donote/apple-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="60x60" href="/static/img/favicon/donote/apple-icon-60x60.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="/static/img/favicon/donote/apple-icon-72x72.png" />
@@ -31,19 +32,19 @@
         <h2><strong>Do</strong>Products™</h2>
         <h3>Your Support Code</h3>
         <script type="text/javascript">
-          document.write("<h1>" + mo + brow + oper + bit + "</h1>");
+          document.write("<h1>" + deviceInfo() + browserInfo() + OSInfo() + bitInfo() + "</h1>");
         </script>
       </header>
     </div>
     <div class="container">
   	  <header class="jumbotron text-left margin-erase">
         <script type="text/javascript">
-          switch (brow) {
-            case 0:
+          switch (browserInfo()) {
+            case '0':
               document.write("Web Browser | No Support");
               break;
 
-            case 6:
+            case '6':
               document.write("Web Browser | Unknown");
               break;
 
@@ -51,21 +52,17 @@
               document.write("Web Browser | Support");
               break;
           }
-          document.write('<br />');
-          switch (operabil) {
-            case 0:
-              document.write("Operation System | No Support");
-              break;
-
-            case 2:
-              document.write("Operation System | Unknown");
-              break;
-
-            default:
-              document.write("Operation System | Support");
-              break;
-          }
-          document.write("<br />Kind of Client Device | " + devn + "<br />Client Web Browser | " + brown + "<br />Client Operation System | " + opern + "<br />Client Bit | " + bitn + "<br /><hr />" + info);
+          document.write('<br />Operation System | ');
+          putDoNoteAbil(DoNoteAbil(OSInfo()));
+          document.write("<br />Kind of Client Device | ");
+          putDevice(deviceInfo());
+          document.write("<br />Client Web Browser | ");
+          putBrowser(browserInfo());
+          document.write("<br />Client Operation System | ");
+          putOS(OSInfo());
+          document.write("<br />Client Bit | ");
+          putBit(bitInfo());
+          document.write("<br /><hr />" + navigator.userAgent);
         </script>
       </header>
     </div>

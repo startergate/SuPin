@@ -1,3 +1,4 @@
+
 function deviceInfo(){
     const info = navigator.userAgent;
     let mo;
@@ -60,17 +61,17 @@ function OSInfo() {
                   } else if (info.indexOf('Android') !== -1) {
                       oper = '8';
                     } else if (info.indexOf('Linux') !== -1) {
-                        oper = '8';
+                        oper = '9';
                       } else if (info.indexOf('iPhone OS') !== -1) {
-                          oper = '9';
+                          oper = 'a';
                         } else if (info.indexOf('CPU OS') !== -1) {
-                            oper = 'a';
+                            oper = 'b';
                           } else if (info.indexOf('Mac OS X') !== -1) {
-                              oper = 'b';
+                              oper = 'c`';
                             } else if (info.indexOf('Mac OS') !== -1) {
-                                oper = 'c';
-                              } else {
                                 oper = 'd';
+                              } else {
+                                oper = 'f';
                               }
   return oper;
 }
