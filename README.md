@@ -1,5 +1,4 @@
-# SuPin-JavaScript
-SuPin JavaScript is Leading Project in SuPin Family.
+# SuPin
 
 System Core Requires Nothing(Of Course, User's Web Browser Must Support JS!), But index.html Requires Bootstrap 3 or Higher.
 <br />
